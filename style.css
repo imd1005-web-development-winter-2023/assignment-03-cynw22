@@ -31,12 +31,21 @@ body {
   background-color: var(--body-background-colour);
 }
 
+.todoDeleteButton {
+  margin-left: 2rem;
+  background-color: red;
+}
+
+.done {
+  background-color: #457b9d;
+}
+
 main {
   min-height: 100vh;
 
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 /*
