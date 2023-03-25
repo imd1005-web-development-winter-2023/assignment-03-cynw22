@@ -153,6 +153,11 @@ h3{
 
 .todolist1{
   background-color: var(--body-list-background-colour);
+  padding: 10px;  
+}
+
+.content {
+  margin: 10px 0px 10px 0px;
 }
 
 /*
