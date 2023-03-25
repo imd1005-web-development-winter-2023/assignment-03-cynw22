@@ -52,9 +52,8 @@ let sortable2 = Sortable.create(todonelist, // Element dragging ended
   evt.newDraggableIndex; // element's new index within new parent, only counting draggable elements
   evt.clone // the clone element
   evt.pullMode;  // when item is in another sortable: `"clone"` if cloning, `true` if moving
-  console.log(evt); // this todoarray has 4 things, have to reorder the array based on the old index and new index, take that item, move it where the new and old items to the new place, tempary variable, getold to new, copy new destination
-  //into attempt variable, and where cofee was what had temp into the coffe, update arraym everything run perfectly
-  //temp, new into into temp, take cofee take into new, temp into old index
+  console.log(evt); 
+  //reorder array based on old index and new index
   let temp = todos[evt.newIndex]; //copy of newIndex
   todos[evt.newIndex] = todos[evt.oldIndex];
   todos[evt.oldIndex] = temp;
