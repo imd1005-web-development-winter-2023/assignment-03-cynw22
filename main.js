@@ -4,9 +4,11 @@ const todoTextFromForm = document.querySelector("#todo-item");
 const todoList = document.querySelector(".todolist1");
 // const todos = ["chips"];
 
-// //keep track of item index
-let oldindexarray = 0;
-let newindexarray = 0;
+// //keep track of item index, 
+// let oldindexarray = 0;
+// let newindexarray = 0;
+
+let todos = [];
 
 let sortable = Sortable.create(todoList, // Element dragging ended
 {onEnd: function (/**Event*/evt) {
@@ -26,43 +28,42 @@ let sortable = Sortable.create(todoList, // Element dragging ended
   todos[evt.oldIndex] = temp;
   console.log(todos);
 
-  //put old index into the exterior
-  oldindexarray = evt.oldIndex;
-  //put new index into exterior
-  newindexarray = evt.newIndex;
-  console.log("old index: ", oldindexarray);  
-  console.log("new index: ", newindexarray);
+  // //put old index into the exterior
+  // oldindexarray = evt.oldIndex;
+  // //put new index into exterior
+  // newindexarray = evt.newIndex;
+  // console.log("old index: ", oldindexarray);  
+  // console.log("new index: ", newindexarray);
+  // switchIndex();
 
-  switchIndex();
 },
 
-onRemove: function (/**Event*/evt) {
-  // same properties as onEnd
-  console.log("element removed", evt);
-},
+// onRemove: function (/**Event*/evt) {
+//   // same properties as onEnd
+//   console.log("element removed", evt);
+// },
 
-// Element is dropped into the list from another list
-onAdd: function (/**Event*/evt) {
-  // same properties as onEnd
-  console.log("element added", evt);
-},
-
+// // Element is dropped into the list from another list
+// onAdd: function (/**Event*/evt) {
+//   // same properties as onEnd
+//   console.log("element added", evt);
+// },
 //second list
 }
 );
 
-function switchIndex() {
-  console.log("NEW old index: ", oldindexarray);  
-  console.log("NEW new index: ", newindexarray);
+// function switchIndex() {
+//   console.log("NEW old index: ", oldindexarray);  
+//   console.log("NEW new index: ", newindexarray);
   
-  //switch todo array values
- temp = todos[newindexarray];
- todos[newindexarray] = todos[oldindexarray];
- todos[oldindexarray] = temp;
-  console.log("todos= ", todos);
-}
+//   //switch todo array values
+//  temp = todos[newindexarray];
+//  todos[newindexarray] = todos[oldindexarray];
+//  todos[oldindexarray] = temp;
+//   console.log("todos= ", todos);
+// }
 
-let buttonsArray = [];
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -105,14 +106,10 @@ let buttonsArray = [];
 
 /*
 remake whole todo funciton
-
 */
-
 ///////////////////////////////////////////////////////////////////////////////////////////////
-let todos = [];
 
-let doneTodos = [];
-
+//variables
 let numOfButtons = 0;
 let liArray = [];
 let doneArray = [];
@@ -186,6 +183,8 @@ function drawToDoList() {
 
   //text
   const taskText = document.createElement("span");
+  //allows you to not select the text, easy to move it around
+ taskText.setAttribute("unselectable", "on"); 
   taskText.textContent = tempText;
   
   //appending
