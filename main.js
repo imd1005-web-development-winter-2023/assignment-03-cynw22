@@ -85,9 +85,12 @@ function deleteClick(buttonIndex){
   todoList.removeChild(liArray[buttonIndex]);
   liArray[buttonIndex] = "removed";
   numRemainding--;
+  console.log("num Remainding: ", numRemainding);
   if (numRemainding == 0){
+    console.log("hi");
     document.querySelector(".tempState").classList.remove("hidden"); 
   }
+
 }
 
 function doneClick(buttonIndex){
@@ -109,8 +112,6 @@ function doneClick(buttonIndex){
 
 function clearAll()
 {
-  numRemainding =0;
-
   document.querySelector(".tempState").classList.remove("hidden"); 
 
   console.log("liArray", liArray);
@@ -124,7 +125,7 @@ function clearAll()
     }
   }
   console.log("clear all");
-
+  numRemainding = 0;
 }
 
 function addTodo(event) {
