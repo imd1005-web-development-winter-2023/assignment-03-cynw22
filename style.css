@@ -59,10 +59,19 @@ main {
 p {
   display: flex;
   justify-content: center;
+
 }
 
 ul {
   list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+span{
+  padding: 20px;
 }
 
 /*
