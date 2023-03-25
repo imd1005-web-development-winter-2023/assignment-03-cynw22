@@ -56,13 +56,28 @@ body {
 }
 
 .doneButton:hover{
-  background-color: var(--body-done-background-colour);
+  background-color: var(--body-delete-colour);
+  color:var(--body-background-colour);
   transition: 0.7s;
 }
 
 .done {
   background-color: var(--body-done-background-colour);
 }
+
+.clearAllButton{
+  border-radius: 1%;
+  border: none;
+  background-color: var(--body-default-colour);
+  color:var(--body-background-colour);
+}
+
+.clearAllButton:hover{
+  color:var(--body-default-colour);
+  background-color: var(--body-done-background-colour);
+  transition: 0.7s;
+}
+
 
 main {
   min-height: 100vh;
@@ -93,7 +108,7 @@ li {
 }
 
 span{
-  padding-left: 20px;
+  padding-left: 5px;
 }
 
 h1{
@@ -122,10 +137,11 @@ h3{
 }
 
 .addButton {
-  border-radius: 1%;
+  border-radius: 10%;
   border: none;
   background-color: var(--body-delete-colour);
   color:var(--body-background-colour);
+  margin-left: 4px;
 }
 
 .addButton:hover{
