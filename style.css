@@ -51,11 +51,6 @@ main {
   min-height: 100vh;
 }
 
-.content {
-  display: flex;
-  justify-content:space-around;
-}
-
 .form1 {
   display: flex;
   justify-content:center;
@@ -64,21 +59,28 @@ main {
 p {
   display: flex;
   justify-content: center;
-
 }
 
 ul {
   list-style-type: none;
+  display: grid;
+  grid-template-columns: auto;
+
 }
 
 li {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto auto 1fr;
   align-items: center;
 }
 
 span{
   padding-left: 20px;
+}
+
+h2{
+  display: grid;
+  justify-content: center;
 }
 
 /*
