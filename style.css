@@ -36,6 +36,11 @@ body {
   margin-left: 2rem;
   background-color: var(--body-delete-colour);
   color:var(--body-background-colour);
+  height: 30px;
+}
+
+.doneButton {
+  height: 30px;
 }
 
 .done {
@@ -67,11 +72,13 @@ ul {
 }
 
 li {
-  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 
 span{
-  padding: 20px;
+  padding-left: 20px;
 }
 
 /*

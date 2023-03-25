@@ -32,66 +32,77 @@ let sortable = Sortable.create(todoList, // Element dragging ended
   newindexarray = evt.newIndex;
   console.log("old index: ", oldindexarray);  
   console.log("new index: ", newindexarray);
+
+  switchIndex();
+},
+
+onRemove: function (/**Event*/evt) {
+  // same properties as onEnd
+  console.log("element removed", evt);
+},
+
+// Element is dropped into the list from another list
+onAdd: function (/**Event*/evt) {
+  // same properties as onEnd
+  console.log("element added", evt);
+},
+
+//second list
+}
+);
+
+function switchIndex() {
+  console.log("NEW old index: ", oldindexarray);  
+  console.log("NEW new index: ", newindexarray);
   
   //switch todo array values
  temp = todos[newindexarray];
  todos[newindexarray] = todos[oldindexarray];
  todos[oldindexarray] = temp;
-  console.log(todos);
-},
-
-
-onRemove: function (/**Event*/evt) {
-  // same properties as onEnd
-  console.log("element removed", evt);
-},
-
-// Element is dropped into the list from another list
-onAdd: function (/**Event*/evt) {
-  // same properties as onEnd
-  console.log("element added", evt);
-},
-
-//second list
+  console.log("todos= ", todos);
 }
-);
 
-const todonelist = document.querySelector(".todonelist1");
-// const todos = ["chips"];
+// const todonelist = document.querySelector(".todonelist1");
+// // const todos = ["chips"];
 
-let sortable2 = Sortable.create(todonelist, // Element dragging ended
-{onEnd: function (/**Event*/evt) {
-  let itemEl = evt.item;  // dragged HTMLElement
-  evt.to;    // target list
-  evt.from;  // previous list
-  evt.oldIndex;  // element's old index within old parent
-  evt.newIndex;  // element's new index within new parent
-  evt.oldDraggableIndex; // element's old index within old parent, only counting draggable elements
-  evt.newDraggableIndex; // element's new index within new parent, only counting draggable elements
-  evt.clone // the clone element
-  evt.pullMode;  // when item is in another sortable: `"clone"` if cloning, `true` if moving
-  console.log(evt); 
-  //reorder array based on old index and new index
-  let temp = todos[evt.newIndex]; //copy of newIndex
-  todos[evt.newIndex] = todos[evt.oldIndex];
-  todos[evt.oldIndex] = temp;
-  console.log(todos);
-},
+// let sortable2 = Sortable.create(todonelist, // Element dragging ended
+// {onEnd: function (/**Event*/evt) {
+//   let itemEl = evt.item;  // dragged HTMLElement
+//   evt.to;    // target list
+//   evt.from;  // previous list
+//   evt.oldIndex;  // element's old index within old parent
+//   evt.newIndex;  // element's new index within new parent
+//   evt.oldDraggableIndex; // element's old index within old parent, only counting draggable elements
+//   evt.newDraggableIndex; // element's new index within new parent, only counting draggable elements
+//   evt.clone // the clone element
+//   evt.pullMode;  // when item is in another sortable: `"clone"` if cloning, `true` if moving
+//   console.log(evt); 
+//   //reorder array based on old index and new index
+//   let temp = todos[evt.newIndex]; //copy of newIndex
+//   todos[evt.newIndex] = todos[evt.oldIndex];
+//   todos[evt.oldIndex] = temp;
+//   console.log(todos);
+// },
 
-onRemove: function (/**Event*/evt) {
-  // same properties as onEnd
-  console.log("element removed", evt);
-},
+// onRemove: function (/**Event*/evt) {
+//   // same properties as onEnd
+//   console.log("element removed", evt);
+// },
 
-// Element is dropped into the list from another list
-onAdd: function (/**Event*/evt) {
-  // same properties as onEnd
-  console.log("element added", evt);
-},
+// // Element is dropped into the list from another list
+// onAdd: function (/**Event*/evt) {
+//   // same properties as onEnd
+//   console.log("element added", evt);
+// },
 
-//second list
-}
-);
+// //second list
+// }
+// );
+
+/*
+remake whole todo funciton
+
+*/
 
 
 let todos = [];
@@ -124,6 +135,7 @@ function drawToDoList() {
 
     const todoDoneButton = document.createElement("button");
 
+    todoDoneButton.classList.add("doneButton");
 
     if (todos[i].isDone === true) {
       todoDoneButton.textContent = "UnDone";
