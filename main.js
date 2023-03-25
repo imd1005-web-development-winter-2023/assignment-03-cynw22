@@ -40,11 +40,15 @@ let tempText = "";
 //holds if done or not
 let isDone = []; 
 
+let numRemainding = 0;
+
 function drawToDoList() {
+
+  document.querySelector(".tempState").classList.add("hidden"); 
   //remaking entire button is clicked sequence
   console.log("button is clicked");
   liArray[numOfButtons] = document.createElement("li");
-  
+
   //delete button
   const todoDeleteButton = document.createElement("button");
   todoDeleteButton.textContent = "Delete";
@@ -71,11 +75,17 @@ function drawToDoList() {
   liArray[numOfButtons].appendChild(taskText);
   
   numOfButtons++;
+  numRemainding++;
+
 }
 
 function deleteClick(buttonIndex){
   console.log("delete click: ", buttonIndex);
   todoList.removeChild(liArray[buttonIndex]);
+  numRemainding--;
+  if (numRemainding == 0){
+    document.querySelector(".tempState").classList.remove("hidden"); 
+  }
 }
 
 function doneClick(buttonIndex){
@@ -97,6 +107,9 @@ function doneClick(buttonIndex){
 
 function clearAll()
 {
+  
+  document.querySelector(".tempState").classList.remove("hidden"); 
+
   console.log("liArray", liArray);
 
   for (let i=0; liArray.length > i; i++ )
@@ -105,6 +118,7 @@ function clearAll()
     numOfButtons = 0;
   }
   console.log("clear all");
+
 }
 
 function addTodo(event) {
