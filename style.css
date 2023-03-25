@@ -65,7 +65,8 @@ ul {
   list-style-type: none;
   display: grid;
   grid-template-columns: auto;
-
+  margin: 0px;
+  padding:10px;
 }
 
 li {
@@ -92,6 +93,7 @@ h2{
 .tempState{
   display: flex;
   justify-content: center;
+  display: inline-block;
 }
 
 /*
