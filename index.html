@@ -46,13 +46,15 @@
         <input name="todo-item" id="todo-item" type="text" required />
         <input type="submit" value="Add" />
       </form>
-      <p> Use the bar above to add new tasks </p>
-      <p> Drag the tasks to move them around </p>
-      
+
         <section>
           <h2>Current Tasks</h2>
           <div class="content">
-            <ul class="todolist1"></ul>
+            <ul class="todolist1">
+                <p> Use the bar above to add new tasks </p>
+                <p> Drag the tasks to move them around </p>
+                <button onclick="clearAll()"> Clear all </button>
+            </ul> 
           </div>
         </section>
 
@@ -67,6 +69,8 @@
         this index = that index-->
       
       <!-- <div id="app"></div> -->
+
+      
     </main>
 
     <!-- This is where we add our awesome JavaScript code -->
