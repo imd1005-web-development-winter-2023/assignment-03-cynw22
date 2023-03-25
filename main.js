@@ -71,8 +71,9 @@ function drawToDoList() {
   
   //appending
   todoList.appendChild(liArray[numOfButtons]);
-  liArray[numOfButtons].appendChild(todoDeleteButton);
+
   liArray[numOfButtons].appendChild(doneArray[numOfButtons]);
+  liArray[numOfButtons].appendChild(todoDeleteButton);
   liArray[numOfButtons].appendChild(taskText);
   
   numOfButtons++;
