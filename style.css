@@ -30,7 +30,7 @@
   PAGE / BODY
 */
 body {
-  font-family: 'Papyrus';
+  font-family: 'Verdana';
   color: var(--body-default-colour);
   background-color: var(--body-background-colour); 
 }
@@ -126,6 +126,7 @@ h3{
   height: 30px;
   border-radius: 1%;
   border: none;
+  background-color: var(--body-list-background-colour);
 }
 
 .doneButton:hover{
@@ -153,7 +154,6 @@ h3{
 }
 
 .todolist1{
-  background-color: var(--body-list-background-colour);
   padding: 10px;  
 }
 
