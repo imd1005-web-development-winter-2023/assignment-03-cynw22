@@ -35,6 +35,78 @@ body {
   background-color: var(--body-background-colour); 
 }
 
+main {
+  min-height: 100vh;
+}
+
+.form1 {
+  display: flex;
+  justify-content:center;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+}
+
+span{
+  padding-left: 5px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  background-color: var(--nav-background-color);
+} 
+
+h2{
+  display: grid;
+  justify-content: center;
+  padding: 5px 0px 2px 0px;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+}
+
+
+.hidden {
+  opacity: 0;
+  /* display: none; */
+}
+
+.tempState{
+  display: inline-flexbox;
+  justify-content: center;
+}
+
+.addButton {
+  border-radius: 10%;
+  border: none;
+  background-color: var(--body-delete-colour);
+  color:var(--body-background-colour);
+  margin-left: 4px;
+}
+
+.addButton:hover{
+  background-color: var(--body-done-background-colour);
+  color:var(--body-delete-colour);
+  transition: 0.7s;
+}
+
 .todoDeleteButton {
   background-color: var(--body-delete-colour);
   color:var(--body-background-colour);
@@ -76,78 +148,6 @@ body {
 .clearAllButton:hover{
   color:var(--body-default-colour);
   background-color: var(--body-done-background-colour);
-  transition: 0.7s;
-}
-
-
-main {
-  min-height: 100vh;
-}
-
-.form1 {
-  display: flex;
-  justify-content:center;
-}
-
-p {
-  display: flex;
-  justify-content: center;
-}
-
-ul {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: auto;
-  margin: 0px;
-  padding: 0px 10px 0px 10px;
-}
-
-li {
-  display: grid;
-  grid-template-columns: auto auto 1fr;
-  align-items: center;
-}
-
-span{
-  padding-left: 5px;
-}
-
-h1{
-  background-color: var(--nav-background-color);
-} 
-
-h2{
-  display: grid;
-  justify-content: center;
-  padding-bottom: 1px;
-}
-
-h3{
-  display: flex;
-  justify-content: center;
-}
-
-.hidden {
-  opacity: 0;
-  /* display: none; */
-}
-
-.tempState{
-  display: inline-flexbox;
-  justify-content: center;
-}
-
-.addButton {
-  border-radius: 10%;
-  border: none;
-  background-color: var(--body-delete-colour);
-  color:var(--body-background-colour);
-  margin-left: 4px;
-}
-
-.addButton:hover{
-  background-color: var(--body-done-background-colour);
-  color:var(--body-delete-colour);
   transition: 0.7s;
 }
 
