@@ -85,7 +85,8 @@ h2{
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  /* display: none; */
 }
 
 .tempState{
