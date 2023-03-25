@@ -81,10 +81,16 @@ span{
 h2{
   display: grid;
   justify-content: center;
+  padding-bottom: 1px;
 }
 
 .hidden {
-  opacity: 0;
+  display: none;
+}
+
+.tempState{
+  display: flex;
+  justify-content: center;
 }
 
 /*
