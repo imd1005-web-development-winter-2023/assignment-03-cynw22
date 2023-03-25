@@ -41,26 +41,28 @@
     -->
     <main>
       <h1>Noel's List</h1>
+      
+        <form class="form1">
+          <label class="sr-only" for="todo-item">To do description:</label>
+          <input name="todo-item" id="todo-item" type="text" required />
+          <input type="submit" value="Add" />
+        </form>
 
-      <form class="form1">
-        <label class="sr-only" for="todo-item">To do description:</label>
-        <input name="todo-item" id="todo-item" type="text" required />
-        <input type="submit" value="Add" />
-      </form>
+      <div class="content">
+        <section>
+          <h2>Current tasks</h2>
 
-      <section>
-        <h2>Current tasks</h2>
+          <ul class="todolist1"></ul>
 
-        <ul class="todolist1"></ul>
+        </section>
 
-      </section>
+        <section>
+          <h2>Completed Tasks</h2>
 
-      <section>
-        <h2>Completed Tasks</h2>
-
-        <ul class="todonelist1"></ul>
-      </section>
-
+          <ul class="todonelist1"></ul>
+        </section>
+      </div>
+      
       <!-- <div id="app"></div> -->
     </main>
 

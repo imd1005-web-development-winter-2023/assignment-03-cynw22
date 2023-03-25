@@ -20,6 +20,7 @@
   /* Body configuration */
   --body-default-colour: var(--colour-cello);
   --body-background-colour: var(--colour-peppermint);
+  --body-delete-colour: var(--colour-cello);
 }
 
 /*
@@ -28,12 +29,13 @@
 body {
   font-family: 'Brush Script MT', cursive;
   color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  background-color: var(--body-background-colour); 
 }
 
 .todoDeleteButton {
   margin-left: 2rem;
-  background-color: red;
+  background-color: var(--body-delete-colour);
+  color:var(--body-background-colour);
 }
 
 .done {
@@ -42,12 +44,19 @@ body {
 
 main {
   min-height: 100vh;
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
+.content {
+  display: flex;
+  justify-content:space-around;
+  
+}
+
+.form1 {
+  display: flex;
+  justify-content:center;
+
+}
 /*
   Screen reader text utility class
 */
