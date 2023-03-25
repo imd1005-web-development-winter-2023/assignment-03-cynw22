@@ -22,6 +22,7 @@
   --body-background-colour: var(--colour-peppermint);
   --body-delete-colour: var(--colour-cello);
   --nav-background-color: var(--colour-aquaisland);
+  --body-done-background-colour: var(--colour-wedgewood);
 }
 
 /*
@@ -45,7 +46,7 @@ body {
 }
 
 .done {
-  background-color: #457b9d;
+  background-color: var(--body-done-background-colour);
 }
 
 main {
