@@ -67,9 +67,15 @@ p {
   justify-content: center;
 }
 
-h1{
+.navBar{
   background-color: var(--nav-background-color);
+  display: flex;
 } 
+
+.logoImg{
+  width: 5%;
+  height: auto;
+}
 
 h2{
   display: grid;
