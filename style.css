@@ -85,15 +85,20 @@ h2{
   padding-bottom: 1px;
 }
 
+h3{
+  display: flex;
+  justify-content: center;
+}
+
 .hidden {
   opacity: 0;
   /* display: none; */
 }
 
 .tempState{
-  display: flex;
+  display: inline-flexbox;
   justify-content: center;
-  display: inline-block;
+ 
 }
 
 /*
