@@ -4,6 +4,10 @@ const todoTextFromForm = document.querySelector("#todo-item");
 const todoList = document.querySelector(".todolist1");
 // const todos = ["chips"];
 
+// //keep track of item index
+let oldindexarray = 0;
+let newindexarray = 0;
+
 let sortable = Sortable.create(todoList, // Element dragging ended
 {onEnd: function (/**Event*/evt) {
   let itemEl = evt.item;  // dragged HTMLElement
@@ -21,7 +25,21 @@ let sortable = Sortable.create(todoList, // Element dragging ended
   todos[evt.newIndex] = todos[evt.oldIndex];
   todos[evt.oldIndex] = temp;
   console.log(todos);
+
+  //put old index into the exterior
+  oldindexarray = evt.oldIndex;
+  //put new index into exterior
+  newindexarray = evt.newIndex;
+  console.log("old index: ", oldindexarray);  
+  console.log("new index: ", newindexarray);
+  
+  //switch todo array values
+ temp = todos[newindexarray];
+ todos[newindexarray] = todos[oldindexarray];
+ todos[oldindexarray] = temp;
+  console.log(todos);
 },
+
 
 onRemove: function (/**Event*/evt) {
   // same properties as onEnd
@@ -76,9 +94,9 @@ onAdd: function (/**Event*/evt) {
 );
 
 
-const todos = [];
+let todos = [];
 
-const doneTodos = [];
+let doneTodos = [];
 
 function drawToDoList() {
   // Clear all of the entries in the list
@@ -88,7 +106,9 @@ function drawToDoList() {
 
   for (let i = 0; i < todos.length; i++) {
     const listItem = document.createElement("li");
-    listItem.textContent = todos[i].text;
+    //listItem.textContent = todos[i].text;
+    const taskText = document.createElement("span");
+    taskText.textContent = todos[i].text;
 
     if (todos[i].isDone === true) {
       listItem.classList.add("done");
@@ -103,6 +123,7 @@ function drawToDoList() {
     todoDeleteButton.addEventListener("click", deleteTodo);
 
     const todoDoneButton = document.createElement("button");
+
 
     if (todos[i].isDone === true) {
       todoDoneButton.textContent = "UnDone";
@@ -119,6 +140,7 @@ function drawToDoList() {
 
     listItem.appendChild(todoDoneButton);
     listItem.appendChild(todoDeleteButton);
+    listItem.appendChild(taskText);
 
     todoList.appendChild(listItem);
   }
