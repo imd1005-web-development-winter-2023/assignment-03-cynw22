@@ -30,7 +30,7 @@
   PAGE / BODY
 */
 body {
-  font-family: 'Verdana';
+  font-family: 'Verdana', sans-serif;
   color: var(--body-default-colour);
   background-color: var(--body-background-colour); 
 }
@@ -81,7 +81,6 @@ h3{
   display: flex;
   justify-content: center;
 }
-
 
 .hidden {
   opacity: 0;
@@ -153,9 +152,7 @@ h3{
   /* transition: 0.7s; */
 }
 
-.todolist1{
-  padding: 10px;  
-}
+
 
 .content {
   margin: 10px 0px 10px 0px;
@@ -163,6 +160,10 @@ h3{
 
 footer {
   background-color: var(--body-done-background-colour);
+}
+
+.instructions{
+  margin: 5px;
 }
 
 /*
