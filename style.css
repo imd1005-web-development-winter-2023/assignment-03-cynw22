@@ -50,7 +50,6 @@ body {
 }
 
 .doneButton {
-
   height: 30px;
   border-radius: 1%;
   border: none;
@@ -120,6 +119,19 @@ h3{
 .tempState{
   display: inline-flexbox;
   justify-content: center;
+}
+
+.addButton {
+  border-radius: 1%;
+  border: none;
+  background-color: var(--body-delete-colour);
+  color:var(--body-background-colour);
+}
+
+.addButton:hover{
+  background-color: var(--body-done-background-colour);
+  color:var(--body-delete-colour);
+  transition: 0.7s;
 }
 
 /*
