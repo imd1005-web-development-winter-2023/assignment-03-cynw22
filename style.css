@@ -23,6 +23,7 @@
   --body-delete-colour: var(--colour-cello);
   --nav-background-color: var(--colour-aquaisland);
   --body-done-background-colour: var(--colour-aquaisland);
+  --body-list-background-colour: white;
 }
 
 /*
@@ -98,7 +99,7 @@ ul {
   display: grid;
   grid-template-columns: auto;
   margin: 0px;
-  padding:10px;
+  padding: 0px 10px 0px 10px;
 }
 
 li {
@@ -148,6 +149,10 @@ h3{
   background-color: var(--body-done-background-colour);
   color:var(--body-delete-colour);
   transition: 0.7s;
+}
+
+.todolist1{
+  background-color: var(--body-list-background-colour);
 }
 
 /*
