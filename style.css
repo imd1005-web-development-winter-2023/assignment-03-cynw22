@@ -27,7 +27,7 @@
   PAGE / BODY
 */
 body {
-  font-family: 'Brush Script MT', cursive;
+  font-family: 'Papyrus';
   color: var(--body-default-colour);
   background-color: var(--body-background-colour); 
 }
