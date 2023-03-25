@@ -49,14 +49,13 @@ main {
 .content {
   display: flex;
   justify-content:space-around;
-  
 }
 
 .form1 {
   display: flex;
   justify-content:center;
-
 }
+
 /*
   Screen reader text utility class
 */
