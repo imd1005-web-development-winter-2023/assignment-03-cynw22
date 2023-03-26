@@ -23,7 +23,12 @@
   --body-delete-colour: var(--colour-cello);
   --nav-background-color: var(--colour-aquaisland);
   --body-done-background-colour: var(--colour-aquaisland);
-  --body-list-background-colour: white;
+  --body-list-background-colour: var(--colour-peppermint);
+  /*The colors are all off, might need to fix it later */
+  
+  /*Text Configuration*/
+
+
 }
 
 /*
@@ -98,7 +103,8 @@ h3{
 .tempState{
   display: inline-flexbox;
   justify-content: center;
-  padding-top: 15%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .addButton {
