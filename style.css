@@ -91,7 +91,7 @@ h3{
 
 .hidden {
   opacity: 0;
-  /* display: none; */
+  display: none; 
 }
 
 .tempState{
