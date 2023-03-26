@@ -97,6 +97,7 @@ h3{
 .tempState{
   display: inline-flexbox;
   justify-content: center;
+  padding-top: 15%;
 }
 
 .addButton {
