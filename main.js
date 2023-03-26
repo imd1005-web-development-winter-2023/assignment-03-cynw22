@@ -157,4 +157,5 @@ function addTodo(event) {
 //   pElem.innerText= "add todo clicked";
 
 // }
+
 form.addEventListener("submit", addTodo);
