@@ -47,6 +47,7 @@ function drawToDoList() {
   document.querySelector(".tempState").classList.add("hidden"); 
   //remaking entire button is clicked sequence
   console.log("button is clicked");
+  screenlog();
   //creates li container
   liArray[numOfButtons] = document.createElement("li");
 
@@ -82,6 +83,7 @@ function drawToDoList() {
 
 function deleteClick(buttonIndex){
   console.log("delete click: ", buttonIndex);
+  screenlog();
   todoList.removeChild(liArray[buttonIndex]);
   liArray[buttonIndex] = "removed";
   numRemainding--;
@@ -95,6 +97,7 @@ function deleteClick(buttonIndex){
 
 function doneClick(buttonIndex){
   console.log("done click: ", buttonIndex);
+  screenlog();
   if (isDone[buttonIndex] == 1) {
     //either one works
     liArray[buttonIndex].classList.add("done");
@@ -125,6 +128,7 @@ function clearAll()
     }
   }
   console.log("clear all");
+  screenlog();
   numRemainding = 0;
 }
 
@@ -147,4 +151,9 @@ function addTodo(event) {
   drawToDoList();
 }
 
+function screenlog(){
+  const pElem = document.getElementById("show-button-click");
+  pElem.innerText= "add todo clicked";
+
+}
 form.addEventListener("submit", addTodo);
