@@ -97,7 +97,7 @@ function deleteClick(buttonIndex){
 
 function doneClick(buttonIndex){
   console.log("done click: ", buttonIndex);
-  screenlog();
+  //screenlog();
   if (isDone[buttonIndex] == 1) {
     //either one works
     liArray[buttonIndex].classList.add("done");
@@ -151,9 +151,10 @@ function addTodo(event) {
   drawToDoList();
 }
 
-function screenlog(){
-  const pElem = document.getElementById("show-button-click");
-  pElem.innerText= "add todo clicked";
+//similar to console.log except displays on screen - in process
+// function screenlog(){
+//   const pElem = document.getElementById("show-button-click");
+//   pElem.innerText= "add todo clicked";
 
-}
+// }
 form.addEventListener("submit", addTodo);
