@@ -138,7 +138,7 @@ h3{
 .doneButton:hover{
   background-color: var(--body-delete-colour);
   color:var(--body-background-colour);
-  transition: 0.1s;
+  /* transition: 0.1s; */
 }
 
 .done {
