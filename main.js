@@ -47,7 +47,7 @@ function drawToDoList() {
   document.querySelector(".tempState").classList.add("hidden"); 
   //remaking entire button is clicked sequence
   console.log("button is clicked");
-  screenlog();
+  //screenlog();
   //creates li container
   liArray[numOfButtons] = document.createElement("li");
 
@@ -83,7 +83,7 @@ function drawToDoList() {
 
 function deleteClick(buttonIndex){
   console.log("delete click: ", buttonIndex);
-  screenlog();
+  //screenlog();
   todoList.removeChild(liArray[buttonIndex]);
   liArray[buttonIndex] = "removed";
   numRemainding--;
@@ -128,7 +128,7 @@ function clearAll()
     }
   }
   console.log("clear all");
-  screenlog();
+  //screenlog();
   numRemainding = 0;
 }
 
