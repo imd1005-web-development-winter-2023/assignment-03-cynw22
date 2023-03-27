@@ -47,19 +47,20 @@
       <div style="width: 100%;">
       <section>
         <h2>Current Tasks</h2>
+        <div class="instructions">
+              <p> Use the bar below to add new tasks </p>
+              <p> Drag the tasks to move them around </p>  
+            </div>
         <form class="form1">
           <label class="sr-only" for="todo-item">To do description:</label>
-          <input name="todo-item" id="todo-item" type="text" required />
+          <input class="inputArea" name="todo-item" id="todo-item" type="text" required />
           <input class="addButton" type="submit" value="Add" />
         </form>
       </section>
 
       <section>
         <div class="content">
-            <div class="instructions">
-              <p> Use the bar above to add new tasks </p>
-              <p> Drag the tasks to move them around </p>  
-            </div>
+            
           <div class="todolist1">
             <button class="clearAllButton" onclick="clearAll()"> Clear all </button>
           </div> 

@@ -49,6 +49,10 @@ main {
   justify-content:center;
 }
 
+.inputArea{
+  width: 50%;
+}
+
 .todolist1 {
   list-style-type: none;
   display: grid;
