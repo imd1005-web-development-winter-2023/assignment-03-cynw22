@@ -28,7 +28,7 @@
   /*The colors are all off, might need to fix it later */
   
   /*Text Configuration*/
-
+  --body-font-size: 150%;
 }
 
 /*
@@ -38,6 +38,7 @@ body {
   font-family: 'Verdana', sans-serif;
   color: var(--body-default-colour);
   background-color: var(--body-background-colour); 
+  font-size: var(--body-font-size);
 }
 
 main {
