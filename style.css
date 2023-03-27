@@ -50,10 +50,6 @@ main {
   justify-content:center;
 }
 
-.inputArea{
-  width: 40%;
-}
-
 .todolist1 {
   list-style-type: none;
   display: grid;
@@ -209,4 +205,11 @@ footer {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .inputArea{
+    width: 40%;
+  }
+
 }
