@@ -49,7 +49,7 @@ main {
   justify-content:center;
 }
 
-ul {
+.todolist1 {
   list-style-type: none;
   display: grid;
   grid-template-columns: auto;
