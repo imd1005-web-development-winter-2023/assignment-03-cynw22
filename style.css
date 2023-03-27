@@ -13,6 +13,7 @@
   --colour-aquaisland: #a8dadc;
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
+  --colour-white: white;
 
   /* Header configuration */
   --header-heading-colour: var(--colour-peppermint);
@@ -20,23 +21,182 @@
   /* Body configuration */
   --body-default-colour: var(--colour-cello);
   --body-background-colour: var(--colour-peppermint);
+  --body-delete-colour: var(--colour-cello);
+  --nav-background-color: var(--colour-aquaisland);
+  --body-done-background-colour: var(--colour-aquaisland);
+  --body-list-background-colour: var(--colour-white);
+  /*The colors are all off, might need to fix it later */
+  
+  /*Text Configuration*/
+  --body-font-size: 1rem;
+  --body-content-font-size: 1.25rem;
+  --body-content-larger-font-size: 1.5rem;
+  --body-content-header-font-size: 2rem;
 }
 
 /*
   PAGE / BODY
 */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Verdana', sans-serif;
   color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  background-color: var(--body-background-colour); 
+  font-size: var(--body-font-size);
 }
 
 main {
   min-height: 100vh;
+}
 
+.form1 {
+  display: flex;
+  justify-content:center;
+}
+
+.todolist1 {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+}
+
+span{
+  padding-left: 5px;
+}
+
+p {
   display: flex;
   justify-content: center;
+}
+
+.navBar{
+  background-color: var(--nav-background-color);
+  display: flex;
   align-items: center;
+} 
+
+.logoImg{
+  width: 5%;
+  height: auto;
+  min-width: 50px;
+}
+
+h1{
+  font-size: var(--body-content-font-size);
+}
+
+h2{
+  display: grid;
+  justify-content: center;
+  padding: 40px 0px 0.5% 0px;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  opacity: 0;
+  display: none; 
+}
+
+.tempState{
+  display: inline-flexbox;
+  justify-content: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.addButton {
+  border-radius: 10%;
+  border: none;
+  background-color: var(--body-delete-colour);
+  color:var(--body-background-colour);
+  margin-left: 10px;
+}
+
+.addButton:hover{
+  background-color: var(--body-done-background-colour);
+  color:var(--body-delete-colour);
+  /* transition: 0.7s; */
+}
+
+.todoDeleteButton {
+  background-color: var(--body-delete-colour);
+  color:var(--body-background-colour);
+  height: 30px;  
+  border-radius: 1%;
+  border: none;
+}
+
+.todoDeleteButton:hover{
+  color:var(--body-default-colour);
+  background-color: var(--body-done-background-colour);
+  /* transition: 0.7s; */
+}
+
+.doneButton {
+  height: 30px;
+  border-radius: 1%;
+  border: none;
+  background-color: var(--body-list-background-colour);
+  color:var(--body-delete-colour);
+}
+
+.doneButton:hover{
+  background-color: var(--body-done-background-colour);
+  color:var(--body-delete-colour);
+  /* transition: 0.1s; */
+}
+
+.done {
+  background-color: var(--body-done-background-colour);
+}
+
+.clearAllButton{
+  border-radius: 1%;
+  border: none;
+  background-color: var(--body-default-colour);
+  color:var(--body-background-colour);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.clearAllButton:hover{
+  color:var(--body-default-colour);
+  background-color: var(--body-done-background-colour);
+  /* transition: 0.7s; */
+}
+
+.content {
+  margin: 10px 10% 10px 10%;
+}
+
+footer {
+  background-color: var(--body-done-background-colour);
+}
+
+.instructions{
+  margin: 5px 0px 25px 0px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.snowman{
+  min-width: 100%;
+  padding-top: 5%;
+  padding-bottom: 2%;
 }
 
 /*
@@ -52,4 +212,60 @@ main {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .inputArea{
+    width: 40%;
+  }
+
+  h1{
+    font-size: var(--body-content-larger-font-size);
+  }
+
+  h2{
+    font-size: var(--body-content-header-font-size);
+  }
+
+  h3{
+    font-size: var(--body-content-larger-font-size);
+  }
+
+  h4{
+    font-size: var(--body-content-font-size);
+  }
+
+  p {
+    font-size: var(--body-content-font-size);
+  }
+
+  .text-instructions {
+    font-size: var(--body-content-larger-font-size);
+  }
+
+  .clearAllButton{
+    font-size: var(--body-content-larger-font-size);
+  }
+
+  .addButton {
+    font-size: var(--body-content-font-size);
+    padding: 0.5%;
+  }
+
+  span{
+    font-size:  var(--body-content-font-size);
+
+  }
+
+  .doneButton{
+    font-size:  var(--body-content-font-size);
+    height: 40px;
+  }
+
+  .todoDeleteButton{
+    font-size: var(--body-content-font-size);
+    height:40px;
+  }
+
+
 }

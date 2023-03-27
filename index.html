@@ -18,6 +18,10 @@
 
     <!-- Set the Favicon  -->
     <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+
+    <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
   </head>
   <body>
     <!--
@@ -36,8 +40,47 @@
 
     -->
     <main>
-      <div id="app"></div>
+      <div class="navBar" onclick="location.href='index.html';" style="cursor: pointer;">
+        <img class="logoImg" src="blob.png" alt="snowflake logo">
+        <h1>Noel's List</h1>
+      </div>
+      <div style="width: 100%;">
+        <section>
+          <h2>Current Tasks</h2>
+          <div class="instructions">
+                <p class="textInstrucitons"> Use the bar below to add new tasks </p>
+                <p class="textInstructions"> Drag the tasks to move them around </p>  
+              </div>
+          <form class="form1">
+            <label class="sr-only" for="todo-item">To do description:</label>
+            <input class="inputArea" name="todo-item" id="todo-item" type="text" required />
+            <input class="addButton" type="submit" value="Add" />
+          </form>
+        </section>
+
+        <section>
+          <div class="content">
+              
+            <div class="todolist1">
+              <button class="clearAllButton" onclick="clearAll()"> Clear all </button>
+            </div> 
+            <div class="tempState">
+              <h3> Nothing's Here :0 </h3>
+              <p> Add more with the bar above :D</p>
+            </div>
+            <div class="center">
+              <img class="snowman" src="snowman.jpg" alt="Snowman">
+            </div>
+          </div>
+        </section>
+      
+      <!--<div id="show-button-click">aaa</div>-->
+      </div>
+    
     </main>
+    <footer>
+      <h4>Noel's List</h4>
+    </footer>
 
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
