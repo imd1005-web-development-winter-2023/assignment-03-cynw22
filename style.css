@@ -29,6 +29,9 @@
   
   /*Text Configuration*/
   --body-font-size: 1rem;
+  --body-content-font-size: 1.25rem;
+  --body-content-larger-font-size: 1.5rem;
+  --body-content-header-font-size: 2rem;
 }
 
 /*
@@ -211,5 +214,48 @@ footer {
   .inputArea{
     width: 40%;
   }
+
+  h1{
+    font-size: var(--body-content-larger-font-size);
+  }
+
+  h2{
+    font-size: var(--body-content-header-font-size);
+  }
+
+  h3{
+    font-size: var(--body-content-larger-font-size);
+  }
+
+  h4{
+    font-size: var(--body-content-font-size);
+  }
+
+  p {
+    font-size: var(--body-content-font-size);
+  }
+
+  .clearAllButton{
+    font-size: var(--body-content-larger-font-size);
+  }
+
+  .addButton {
+  font-size: var(--body-content-font-size);
+  }
+
+  span{
+    font-size:  var(--body-content-font-size);
+
+  }
+
+  .doneButton{
+    font-size:  var(--body-content-font-size);
+  }
+
+  .todoDeleteButton{
+    font-size: var(--body-content-font-size);
+
+  }
+
 
 }
