@@ -88,6 +88,10 @@ p {
   min-width: 50px;
 }
 
+h1{
+  font-size: var(--body-content-font-size);
+}
+
 h2{
   display: grid;
   justify-content: center;
