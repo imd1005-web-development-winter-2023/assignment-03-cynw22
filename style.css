@@ -239,12 +239,17 @@ footer {
     font-size: var(--body-content-font-size);
   }
 
+  .text-instructions {
+    font-size: var(--body-content-larger-font-size);
+  }
+
   .clearAllButton{
     font-size: var(--body-content-larger-font-size);
   }
 
   .addButton {
-  font-size: var(--body-content-font-size);
+    font-size: var(--body-content-font-size);
+    padding: 0.5%;
   }
 
   span{
@@ -254,11 +259,12 @@ footer {
 
   .doneButton{
     font-size:  var(--body-content-font-size);
+    height: 40px;
   }
 
   .todoDeleteButton{
     font-size: var(--body-content-font-size);
-
+    height:40px;
   }
 
 
