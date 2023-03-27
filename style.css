@@ -13,6 +13,7 @@
   --colour-aquaisland: #a8dadc;
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
+  --colour-white: white;
 
   /* Header configuration */
   --header-heading-colour: var(--colour-peppermint);
@@ -23,11 +24,10 @@
   --body-delete-colour: var(--colour-cello);
   --nav-background-color: var(--colour-aquaisland);
   --body-done-background-colour: var(--colour-aquaisland);
-  --body-list-background-colour: var(--colour-peppermint);
+  --body-list-background-colour: var(--colour-white);
   /*The colors are all off, might need to fix it later */
   
   /*Text Configuration*/
-
 
 }
 
@@ -140,11 +140,12 @@ h3{
   border-radius: 1%;
   border: none;
   background-color: var(--body-list-background-colour);
+  color:var(--body-delete-colour);
 }
 
 .doneButton:hover{
   background-color: var(--body-done-background-colour);
-  color:var(--body-delete-colou);
+  color:var(--body-delete-colour);
   /* transition: 0.1s; */
 }
 
